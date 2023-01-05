@@ -1,6 +1,6 @@
 ---
 
-- name: copy over .bashrc config files
+- name: copy over .bashrc config file
   copy:
     src: files/.bashrc
     dest: /home/temhr/.bashrc
@@ -8,10 +8,18 @@
     group: root
     mode: 0644
 
-- name: copy over .bash_prompt config files
+- name: copy over .bash_prompt config file
   copy:
     src: files/.bash_prompt
     dest: /home/temhr/.bash_prompt
+    owner: root
+    group: root
+    mode: 0644
+
+- name: copy over NTP config file
+  copy:
+    src: files/timesyncd.conf
+    dest: /etc/systemd/timesyncd.conf
     owner: root
     group: root
     mode: 0644
