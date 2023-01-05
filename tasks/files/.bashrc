@@ -115,4 +115,4 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
   
-  source ~/.bash_prompt
+source ~/.bash_prompt
