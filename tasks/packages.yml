@@ -1,6 +1,9 @@
 - name: install packages
   package:
     name: 
+     - ansible
+     - cron
+     - git
      - htop
      - tmux
      - vim-nox
