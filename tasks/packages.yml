@@ -5,5 +5,6 @@
      - cron
      - git
      - htop
+     - nano
      - tmux
      - vim-nox
