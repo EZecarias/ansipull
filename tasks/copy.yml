@@ -1,0 +1,9 @@
+---
+
+- name: copy over .bashrc config files
+  copy:
+    src: files/.bashrc
+    dest: /home/temhr/.bashrc
+    owner: root
+    group: root
+    mode: 0644
