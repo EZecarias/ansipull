@@ -2,6 +2,7 @@
   package:
     name: 
      - ansible
+     - busybox
      - cron
      - git
      - htop
