@@ -7,3 +7,11 @@
     owner: root
     group: root
     mode: 0644
+
+- name: copy over .bash_prompt config files
+  copy:
+    src: files/.bash_prompt
+    dest: /home/temhr/.bash_prompt
+    owner: root
+    group: root
+    mode: 0644
