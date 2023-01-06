@@ -6,6 +6,7 @@
      - cron
      - git
      - htop
+     - iperf
      - nano
      - tmux
      - vim-nox
