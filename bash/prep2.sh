@@ -2,25 +2,19 @@
 
 wget https://cloud-images.ubuntu.com/minimal/releases/jammy/release/ubuntu-22.04-minimal-cloudimg-amd64.img
 
-# Ask for VMID
 echo Hello, what is the VMID for this machine?
-
 read virmacid
 
 qm set $virmacid --serial0 socket --vga serial0
 
 mv ubuntu-22.04-minimal-cloudimg-amd64.img ubuntu-22.04.qcow2
 
-# Get VM size from user
 echo And, what is the VMs storage size \(32G\)?
-
 read storesize
 
 qemu-img resize ubuntu-22.04.qcow2 $storesize
 
-# Save ISO on which disk
-echo The VMs storage will be placed on what disk?
-
+echo The VMs storage will be placed on which pve disk?
 read diskloc
 
 qm importdisk $virmacid ubuntu-22.04.qcow2 $diskloc
