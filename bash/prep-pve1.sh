@@ -20,6 +20,6 @@ systemctl restart systemd-logind
 wget 192.168.0.100:8080/sys/grub --directory-prefix=/etc/default/grub
 update-grub
 
-apt install adb ffmpeg git gcc -y
+apt install adb ethtool ffmpeg gcc git iperf -y
 
 reboot
