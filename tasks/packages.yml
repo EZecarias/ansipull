@@ -9,4 +9,5 @@
      - iperf
      - nano
      - tmux
+     - usbutils
      - vim-nox
