@@ -12,13 +12,13 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 
 - **playbooks/**: Additional playbooks to run or have triggered at will.
 
-- **roles/**: Directory which contains the base, server, and workstation roles.
+- **roles/**: Contains the base, server, and workstation roles.
 
-  - **roles/base**: Role which applies to every host/machine; contains things such as default configs, users, etc.
+  - **base/**: Role applied to every host/machine; contains default configs, users, etc.
 
-  - **roles/workstation**: Runs after the base role, and only on hosts designated to be workstations. GUI-specific things, such as GUI apps (Firefox, etc), Flatpaks, wallpaper, etc. Has a folder for the GNOME and MATE desktops.
+  - **workstation/**: Runs after the base role, and only on workstation hosts: GUI-specific things/apps (Firefox, etc), Flatpaks, wallpaper, etc. Has a folder for the GNOME and MATE desktops.
 
-  - **roles/server**: Runs after the base role, and only on hosts designated to be servers. Monitoring plugins, unattended-updates, server firewall rules, and other server-related things are configured here.
+  - **server/**: Runs after the base role, and only on server hosts. Monitoring plugins, unattended-updates, server firewall rules, and other server-related things are configured here.
 
 - **ansible.cfg**: Configuration settings for Ansible goes here.
 
