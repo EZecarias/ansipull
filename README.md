@@ -4,25 +4,25 @@ Anisible Pull implementation for my homelab; one-click automation for home-serve
 
 # Repository's structure:
 
-**group_vars/**: Directory where variables will be applied on every system.
+- **group_vars/**: Directory where variables will be applied on every system.
 
-**host_vars/**: Directory where each machine (by ip) gets a host_vars file that sets variables specific to that laptop/desktop/server.
+- **host_vars/**: Directory where each machine (by ip) gets a host_vars file that sets variables specific to that laptop/desktop/server.
 
-**playbooks/**: Additional playbooks to run or have triggered at will.
+- **playbooks/**: Additional playbooks to run or have triggered at will.
 
-**roles/**: Directory which contains the base, server, and workstation roles.
+- **roles/**: Directory which contains the base, server, and workstation roles.
 
-**roles/base**: Role which applies to every host/machine; contains things such as default configs, users, etc.
+  - **roles/base**: Role which applies to every host/machine; contains things such as default configs, users, etc.
 
-**roles/workstation**: Runs after the base role, and only on hosts designated to be workstations. GUI-specific things, such as GUI apps (Firefox, etc), Flatpaks, wallpaper, etc. Has a folder for the GNOME and MATE desktops.
+  - **roles/workstation**: Runs after the base role, and only on hosts designated to be workstations. GUI-specific things, such as GUI apps (Firefox, etc), Flatpaks, wallpaper, etc. Has a folder for the GNOME and MATE desktops.
 
-**roles/server**: Runs after the base role, and only on hosts designated to be servers. Monitoring plugins, unattended-updates, server firewall rules, and other server-related things are configured here.
+  - **roles/server**: Runs after the base role, and only on hosts designated to be servers. Monitoring plugins, unattended-updates, server firewall rules, and other server-related things are configured here.
 
-**ansible.cfg**: Configuration settings for Ansible goes here.
+- **ansible.cfg**: Configuration settings for Ansible goes here.
 
-**hosts**: This is the inventory file; how Ansible knows what group to put a machine in.
+- **hosts**: This is the inventory file; how Ansible knows what group to put a machine in.
 
-**local.yml**: This is the default (pull-mode) Playbook that Ansible uses to pull the other more contexual Playbooks above.
+- **local.yml**: This is the default (pull-mode) Playbook that Ansible uses to pull the other more contexual Playbooks above.
 
 # Implementation
 
