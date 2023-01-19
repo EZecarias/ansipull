@@ -1,6 +1,6 @@
 # Ansipull
 
-Anisible Pull implementation for my homelab; one-click automation for home-server installation, configuration, and maintenance. Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_configs.
+Anisible Pull implementation for my homelab; a one-click automation for home-server installation, configuration, and maintenance. Contains a Base-Role playbook which, after initial launch on target machine, creates its own user/Cronjob to semi-automate maintenance; cronjob tracks this github repo and pulls/reruns the config on any committed changes. Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_configs.
 
 # Repository's structure:
 
@@ -30,5 +30,3 @@ First download/install the Ansible app onto your targeted linux machine, then pu
 ```
 ansible-pull -U https://github.com/EZecarias/ansipull.git
 ```
-
-Ansible config contains a Base-Role playbook which, after initial launch on target machine, creates its own user/Cronjob to semi-automate maintenance; Cronjob tracks this repo and reruns the Ansible Pull config on any committed changes.
