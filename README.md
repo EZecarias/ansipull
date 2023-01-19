@@ -1,6 +1,6 @@
 # Ansipull
 
-Anisible Pull implementation for my homelab; a one-click automation for home-server installation, configuration, and maintenance. Contains a Base-Role playbook which, after initial launch on target machine, creates its own user/Cronjob to semi-automate maintenance; cronjob tracks this github repo and pulls/reruns the config on any committed changes. 
+An Anisible-pull implementation for my Linux laptop/desktop and homelab servers; automated installation of applications and configuration of system preferences. Base-role playbook creates a user/Cronjob on target machine to track this github repo and automatically repull/rerun config on any committed changes.
 
 Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_configs.
 
@@ -8,7 +8,7 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 
 - **group_vars/**: Directory where variables will be applied on every system.
 
-- **host_vars/**: Directory where each machine (by ip) gets a host_vars file that sets variables specific to that laptop/desktop/server.
+- **host_vars/**: A host_vars file sets variables specific to any one machine (by ip).
 
 - **playbooks/**: Additional playbooks to run or have triggered at will.
 
