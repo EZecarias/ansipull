@@ -6,7 +6,7 @@ Anisible Pull implementation for my homelab; one-click automation for home-serve
 
 **group_vars/**: Directory where variables will be applied on every system.
 
-**host_vars/**: Directory where each laptop/desktop/server gets a host_vars file, named after its hostname, that sets variables specific to that machine.
+**host_vars/**: Directory where each machine (by ip) gets a host_vars file that sets variables specific to that laptop/desktop/server.
 
 **playbooks/**: Additional playbooks to run or have triggered at will.
 
