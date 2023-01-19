@@ -1,6 +1,6 @@
 # Ansipull
 
-Anisible Pull implementation for my homelab; one-click automation of home-server installation, configuration, and maintenance. Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_configs.
+Anisible Pull implementation for my homelab; one-click automation for home-server installation, configuration, and maintenance. Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_configs.
 
 # Repository's structure:
 
