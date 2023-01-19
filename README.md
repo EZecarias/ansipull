@@ -26,7 +26,7 @@ Anisible Pull implementation for my homelab; one-click automation for home-serve
 
 # Implementation
 
-First download/install the Ansible app onto your targeted linux machine, then pull/run the config on this command: 
+First download/install the Ansible app onto your targeted linux machine, then pull/run this config on the below command: 
 ```
 ansible-pull -U https://github.com/EZecarias/ansipull.git
 ```
