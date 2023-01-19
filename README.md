@@ -4,28 +4,28 @@ Anisible Pull implementation for my homelab; one-click automation of home-server
 
 # Repository's structure:
 
-**group_vars/**: This directory is where I can place variables that will be applied on every system.
+**group_vars/**: Directory where variables will be applied on every system.
 
-**host_vars/**: Each laptop/desktop/server gets a host_vars file in this folder, named after its hostname. Sets variables specific to that computer.
+**host_vars/**: Directory where each laptop/desktop/server gets a host_vars file, named after its hostname, that sets variables specific to that machine.
 
-**playbooks/**: Additional playbooks that I may want to run, or have triggered.
+**playbooks/**: Additional playbooks to run or have triggered at will.
 
-**roles/**: This directory contains my base, workstation, and server roles. Every host gets the base role. Then either 'workstation' or 'server', depending on what it is.
+**roles/**: Directory which contains the base, server, and workstation roles.
 
-**roles/base**: This role is for every host, regardles of the type of device it is. This role contains things that are intended to be on every host, such as default configs, users, etc.
+**roles/base**: Role which applies to every host/machine; contains things such as default configs, users, etc.
 
-**roles/workstation**: After the base role runs on a host, this role runs only on hosts that are designated to be workstations. GUI-specific things, such as GUI apps (Firefox, etc), Flatpaks, wallpaper, etc. Has a folder for the GNOME and MATE desktops.
+**roles/workstation**: Runs after the base role, and only on hosts designated to be workstations. GUI-specific things, such as GUI apps (Firefox, etc), Flatpaks, wallpaper, etc. Has a folder for the GNOME and MATE desktops.
 
-**roles/server**: After the base role runs on a host, this role runs only on hosts designated as servers. Monitoring plugins, unattended-updates, server firewall rules, and other server-related things are configured here.
+**roles/server**: Runs after the base role, and only on hosts designated to be servers. Monitoring plugins, unattended-updates, server firewall rules, and other server-related things are configured here.
 
 **ansible.cfg**: Configuration settings for Ansible goes here.
 
-**hosts**: This is the inventory file. Even in pull-mode, an inventory file can be used. This is how Ansible knows what group to put a machine in.
+**hosts**: This is the inventory file; how Ansible knows what group to put a machine in.
 
-**local.yml**: This is the Playbook that Ansible expects to find by default in pull-mode, think of it as an "index" of sorts that pulls other Playbooks in.
+**local.yml**: This is the default (pull-mode) Playbook that Ansible uses to pull the other more contexual Playbooks above.
 
 # Implementation
 
-Pull/run config on this Ansible command: ansible-pull -U https://github.com/EZecarias/ansipull.git
+Pull and Run config on this command: ansible-pull -U https://github.com/EZecarias/ansipull.git
 
 Ansible config contains a Base Role playbook which, after initial launch on target machine, creates its own user/Cronjob to automate maintenance; Cronjob tracks this repo and reruns Ansible Pull config on any committed changes.
