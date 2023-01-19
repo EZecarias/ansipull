@@ -26,6 +26,9 @@ Anisible Pull implementation for my homelab; one-click automation for home-serve
 
 # Implementation
 
-Pull and Run the config on this command: ansible-pull -U https://github.com/EZecarias/ansipull.git
+Pull and Run the config on this command: 
+```
+ansible-pull -U https://github.com/EZecarias/ansipull.git
+```
 
-Ansible config contains a Base Role playbook which, after initial launch on target machine, creates its own user/Cronjob to automate maintenance; Cronjob tracks this repo and reruns Ansible Pull config on any committed changes.
+Ansible config contains a Base-Role playbook which, after initial launch on target machine, creates its own user/Cronjob to semi-automate maintenance; Cronjob tracks this repo and reruns the Ansible Pull config on any committed changes.
