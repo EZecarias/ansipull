@@ -16,6 +16,8 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 
   - **base/**: Role applied to every host/machine; contains default configs, users, etc.
 
+  - **pve/**: Runs after the base role, and only on proxmox hosts.
+  
   - **workstation/**: Runs after the base role, and only on workstation hosts: GUI-specific things/apps (Firefox, etc), Flatpaks, wallpaper, etc. Has a folder for the GNOME and MATE desktops.
 
   - **server/**: Runs after the base role, and only on server hosts. Monitoring plugins, unattended-updates, server firewall rules, and other server-related things are configured here.
