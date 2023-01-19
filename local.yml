@@ -23,6 +23,12 @@
   roles:
     - base
 
+- hosts: pve
+  tags: pve
+  become: true
+  roles:
+    - pve
+
 - hosts: workstation
   tags: workstation
   become: true
