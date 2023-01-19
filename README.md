@@ -1,6 +1,6 @@
 # Ansipull
 
-An Anisible-pull implementation for my Linux laptop/desktop and homelab servers; automated installation of applications and configuration of system preferences. Base-role playbook creates a user/Cronjob on target machine to track this github repo and automatically repull/rerun config on any committed changes.
+An Anisible-pull implementation for my Linux laptop/desktop and homelab servers; automated installation of apps and configuration of system preferences. Base-role playbook creates a user/Cronjob on target machine to track this github repo and automatically repull/rerun config on any committed changes.
 
 Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_configs.
 
