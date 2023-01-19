@@ -22,7 +22,7 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 
 - **ansible.cfg**: Configuration settings for Ansible goes here.
 
-- **hosts**: This is the inventory file; how Ansible knows what group to put a machine in.
+- **hosts**: The inventory file; where Ansible assigns each machine (by ip) to a group.
 
 - **local.yml**: This is the default (pull-mode) Playbook that Ansible uses to pull the other more contexual Playbooks above.
 
