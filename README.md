@@ -8,7 +8,7 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 
 - **group_vars/**: Directory where variables will be applied on every system.
 
-- **host_vars/**: A host_vars file sets variables specific to any one machine (by ip).
+- **host_vars/**: Files that set variables specific to any one host/machine (by ip).
 
 - **playbooks/**: Additional playbooks to run or have triggered at will.
 
@@ -24,7 +24,7 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 
 - **ansible.cfg**: Configuration settings for Ansible goes here. (inventory name, log path, location of private key,  run/ssh playbook as this remote_user)
 
-- **hosts**: The inventory file; where Ansible assigns each machine (by ip) to a group.
+- **hosts**: The inventory file; where Ansible assigns each machine (by ip) to a tasked group.
 
 - **local.yml**: This is the default (pull-mode) Playbook that Ansible uses to pull the other more contexual Playbooks above.
 
