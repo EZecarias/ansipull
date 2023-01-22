@@ -26,7 +26,7 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 
 - **hosts**: The inventory file; where Ansible assigns each machine (by ip) to a tasked group.
 
-- **local.yml**: This is the default (pull-mode) Playbook that Ansible uses to pull the other more contexual Playbooks above.
+- **local.yml**: The default/main Playbook from which Ansible will pull all other contexual Playbooks (by the device's assigned role): 1) pre-tasks, 2) contextual playbooks, 3) post-tasks.
 
 # Implementation
 
