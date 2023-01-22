@@ -22,7 +22,7 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 
   - **server/**: Runs after the base role, and only on server hosts. Monitoring plugins, unattended-updates, server firewall rules, and other server-related things are configured here.
 
-- **ansible.cfg**: Configuration settings for Ansible goes here.
+- **ansible.cfg**: Configuration settings for Ansible goes here. (inventory name, location of private key,  run playbook as this remote_user)
 
 - **hosts**: The inventory file; where Ansible assigns each machine (by ip) to a group.
 
