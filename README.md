@@ -16,7 +16,7 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 
   - **base/**: Role applied to every host/machine; contains default configs, users, etc.
 
-    - **tasks/**: Feature which oulines base's jobs.
+    - **tasks/**: Feature which oulines Base-role's jobs.
 
       - **main.yml**: Playbook for the base role.
 
