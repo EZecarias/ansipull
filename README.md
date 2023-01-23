@@ -12,7 +12,7 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 
 - **playbooks/**: Additional playbooks to run or have triggered on direction.
 
-- **roles/**: Directory that contains ansible's base role and the divergent pve, server, and workstation roles.
+- **roles/**: Directory of ansible's system of nested or divergent host/device roles.
 
   - **base/**: Role applied to every host/machine; contains shared files, default configs, users, etc.
 
