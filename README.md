@@ -14,7 +14,7 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 
 - **roles/**: Directory that contains ansible's base role and the divergent pve, server, and workstation roles.
 
-  - **base/**: Role applied to every host/machine; contains default configs, users, etc.
+  - **base/**: Role applied to every host/machine; contains shared files, default configs, users, etc.
 
     - **tasks/**: Feature which oulines Base-role's jobs.
 
