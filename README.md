@@ -12,7 +12,7 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 
 - **playbooks/**: Additional playbooks to run or have triggered on direction.
 
-- **roles/**: Directory that contains the base, server, and workstation roles.
+- **roles/**: Directory that contains ansible's base role and the divergent pve, server, and workstation roles.
 
   - **base/**: Role applied to every host/machine; contains default configs, users, etc.
 
@@ -20,7 +20,7 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 
       - **main.yml**: Playbook for the base role.
 
-  - **pve/**: Runs after the base role, and only on proxmox hosts.
+  - **pve/**: Role unique to proxmox hosts.
   
   - **workstation/**: Role unique to workstation hosts: GUI-specific things/apps (Firefox, etc), Flatpaks, wallpaper, etc. Has a folder for the GNOME and MATE desktops.
 
