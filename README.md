@@ -8,7 +8,7 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 
 - **group_vars/**: Variables to be applied on every system.
 
-- **host_vars/**: Files which set variables specific to host/machine (by ip).
+- **host_vars/**: Files which set variables specific to host/machine (filename by ip).
 
 - **playbooks/**: Additional playbooks to run or have triggered on direction.
 
