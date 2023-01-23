@@ -16,9 +16,17 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 
   - **base/**: Role applied to every host/machine; contains shared files, default configs, users, etc.
 
-    - **tasks/**: Feature which oulines Base-role's jobs.
+    - **files/**: 
+
+    - **handlers/**: 
+
+    - **tasks/**: Feature which oulines all Base-role's jobs.
 
       - **main.yml**: Playbook for the base role.
+
+    - **templates/**: 
+
+    - **vars/**: 
 
   - **pve/**: Role unique to proxmox hosts.
   
