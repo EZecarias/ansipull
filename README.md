@@ -6,15 +6,15 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 
 # Repository's structure:
 
-- **group_vars/**: Directory where variables will be applied on every system.
+- **group_vars/**: Variables to be applied on every system.
 
-- **host_vars/**: Files that set variables specific to any one host/machine (by ip).
+- **host_vars/**: Files which set variables specific to host/machine (by ip).
 
-- **playbooks/**: Additional playbooks to run or have triggered at will.
+- **playbooks/**: Additional playbooks to run or have triggered on direction.
 
-- **roles/**: Contains the base, server, and workstation roles.
+- **roles/**: Directory that contains the base, server, and workstation roles.
 
-  - **base/**: A role that's applied to every host/machine; contains default configs, users, etc.
+  - **base/**: Role applied to every host/machine; contains default configs, users, etc.
 
     - **tasks/**: Feature which oulines base's jobs.
 
@@ -22,15 +22,15 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 
   - **pve/**: Runs after the base role, and only on proxmox hosts.
   
-  - **workstation/**: Runs after the base role, and only on workstation hosts: GUI-specific things/apps (Firefox, etc), Flatpaks, wallpaper, etc. Has a folder for the GNOME and MATE desktops.
+  - **workstation/**: Role unique to workstation hosts: GUI-specific things/apps (Firefox, etc), Flatpaks, wallpaper, etc. Has a folder for the GNOME and MATE desktops.
 
-  - **server/**: Runs after the base role, and only on server hosts. Monitoring plugins, unattended-updates, server firewall rules, and other server-related things are configured here.
+  - **server/**: Role unique to server hosts. Monitoring plugins, unattended-updates, server firewall rules, and other server-related things are configured here.
 
 - **ansible.cfg**: Configuration settings for Ansible (inventory filename, log path, private key path, run/ssh playbook as this remote_user)
 
-- **hosts**: The inventory file; where Ansible assigns each machine (by ip) to a role/group.
+- **hosts**: Inventory file; where Ansible assigns each machine (by ip) to a role/group.
 
-- **local.yml**: Default playbook, from which Ansible will pull all other contexual playbooks (by device's role): 1) pre-tasks, 2) contextual playbooks, 3) post-tasks.
+- **local.yml**: Default playbook; from which Ansible will pull all other contexual playbooks (by device's role): 1) pre-tasks, 2) contextual playbooks, 3) post-tasks.
 
 # Implementation
 
