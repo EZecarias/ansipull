@@ -18,7 +18,7 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 
     - **files/**: 
 
-    - **handlers/**: 
+    - **handlers/**: Feature which oulines the services configured by Base-role.
 
     - **tasks/**: Feature which oulines all Base-role's jobs.
 
