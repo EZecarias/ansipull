@@ -1,17 +1,17 @@
 #!/bin/bash 
 
-timedatectl set-timezone Canada/Eastern
+sudo timedatectl set-timezone Canada/Eastern
 
-apt update && apt dist-upgrade -y
+sudo NEEDRESTART_MODE=a apt update && apt dist-upgrade -y
 
-apt install qemu-guest-agent -y
+sudo NEEDRESTART_MODE=a apt install qemu-guest-agent -y
 
-apt install git -y
+sudo NEEDRESTART_MODE=a apt install git -y
 
-apt install ansible -y
+sudo NEEDRESTART_MODE=a apt install ansible -y
 
-apt install cron -y
+sudo NEEDRESTART_MODE=a apt install cron -y
 
-ansible-pull -U https://github.com/EZecarias/ansipull.git
+sudo ansible-pull -U https://github.com/EZecarias/ansipull.git
 
-reboot
+sudo reboot
