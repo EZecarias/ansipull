@@ -1,9 +1,8 @@
 [pve]
-pve0
-pve1
+pve*
 
 [server]
-UbunSer-1
+UbunSer-*
 
 [workstation]
-workstation-1
+workstation-*
