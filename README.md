@@ -13,7 +13,7 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 
 - **ansible.cfg**: Default configuration settings file (inventory file name, log path)
   
-- **hosts**: Inventory file; where Ansible assigns each machine (by ip) to a role/group.
+- **hosts**: Inventory file; where Ansible assigns each machine to a role/group.
 
 - **local.yml**: Default playbook; from which Ansible will pull all other contexual playbooks (by device's role): 1) pre-tasks, 2) contextual playbooks, 3) post-tasks.
 
