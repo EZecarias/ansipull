@@ -20,6 +20,8 @@ systemctl restart systemd-logind
 wget 192.168.0.100:8080/sys/grub --directory-prefix=/etc/default/grub
 update-grub
 
-apt install adb ethtool ffmpeg gcc git iperf -y
+apt install ansible cron git -y
+
+ansible-pull -U https://github.com/EZecarias/ansipull.git
 
 reboot
