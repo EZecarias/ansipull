@@ -1,0 +1,13 @@
+- name: install packages
+  package:
+    name: 
+     - ansible
+     - busybox
+     - cron
+     - git
+     - htop
+     - iperf
+     - nano
+     - tmux
+     - usbutils
+     - vim-nox
