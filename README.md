@@ -6,7 +6,9 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 
 # Repository's structure:
 
-- **host_vars/**: Files which set variables specific to host/machine (filename by ip).
+- **ansible.cfg**: Default configuration settings file (inventory file name, log path)
+
+- **host_vars/**: Files which set variables specific to host/machine (filename by IP).
 
 - **roles/**: Directory of repo's system of nested or divergent host/device roles.
 
