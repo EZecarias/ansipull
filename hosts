@@ -1,5 +1,9 @@
+[pve]
+pve0
+pve1
+
 [server]
-192.168.0.120
-192.168.0.121
-192.168.0.122
 UbunSer-1
+
+[workstation]
+workstation-1
