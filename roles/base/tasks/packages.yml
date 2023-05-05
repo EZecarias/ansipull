@@ -1,9 +1,12 @@
 - name: install packages
   package:
     name: 
-     - ansible
+     - adb
      - busybox
      - cron
+     - ethtool
+     - ffmpeg
+     - gcc
      - git
      - htop
      - iperf
