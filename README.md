@@ -7,7 +7,9 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 # Repository's structure:
 - **roles/**: Directory of repo's system of nested or divergent host/device roles.
 
-  - **pve/**: Role unique to proxmox hosts.
+  - **pve/**: Role unique to proxmox hosts
+  - **server/**: Role unique to server hosts
+  - **workstation/**: Role unique to workstation hosts
 
 - **ansible.cfg**: Default configuration settings file (inventory file name, log path)
   
