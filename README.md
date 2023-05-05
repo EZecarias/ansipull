@@ -5,14 +5,11 @@ An Anisible-pull implementation for my Linux laptop/desktop and homelab servers;
 Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_configs.
 
 # Repository's structure:
-
-- **ansible.cfg**: Default configuration settings file (inventory file name, log path)
-
-- **host_vars/**: Files which set variables specific to host/machine (filename by IP).
-
 - **roles/**: Directory of repo's system of nested or divergent host/device roles.
 
   - **pve/**: Role unique to proxmox hosts.
+
+- **ansible.cfg**: Default configuration settings file (inventory file name, log path)
   
 - **hosts**: Inventory file; where Ansible assigns each machine (by ip) to a role/group.
 
