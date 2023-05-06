@@ -5,7 +5,7 @@
 
 - name: copy sudoers_ansible
   copy:
-    src: files/sudoers_ansible
+    src: users/sudoers_ansible
     dest: /etc/sudoers.d/ansible
     owner: root
     group: root
