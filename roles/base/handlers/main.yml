@@ -1,0 +1,17 @@
+---
+- name: apt_update
+  apt: update_cache=yes
+
+- name: update_tmux_plugin_perms
+  file:
+    path: /home/temhr/.tmux/plugins
+    owner: temhr
+    group: temhr
+    recurse: true
+
+- name: update_vim_bundle_perms
+  file:
+    path: /home/temhr/.vim/bundle
+    owner: temhr
+    group: temhr
+    recurse: true
