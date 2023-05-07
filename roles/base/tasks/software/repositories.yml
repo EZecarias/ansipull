@@ -8,7 +8,6 @@
   when: ansible_distribution == "Debian"
 
 - name: system setup | repositories | add debian-backports
-  hosts: all:!pve
   tags: backports,repositories
   apt_repository:
     repo: deb http://deb.debian.org/debian buster-backports main
