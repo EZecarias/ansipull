@@ -6,7 +6,6 @@
     owner: root
     group: root
     mode: 0440
-  when: "'pve' not in group_names"
 
 - name: users | temhr | copy dotfiles
   copy:
@@ -20,4 +19,3 @@
       - { src: 'bash/.bash_aliases', dest: '.bash_aliases' }
       - { src: 'bash/.bash_prompt', dest: '.bash_prompt' }
   tags: dotfiles
-  when: "'pve' not in group_names"
