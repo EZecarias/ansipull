@@ -1,2 +1,6 @@
 - block:
+  # Make sure users exist on the system
+  - import_tasks: users/temhr.yml
+  
+  # Perform remaining tasks:
   - import_tasks: packages.yml
