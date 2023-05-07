@@ -28,27 +28,6 @@
     - { dir: '.vim/bundle' }
     - { dir: '.vim/colors' }
     - { dir: '.vim/ftplugin' }
-    - { dir: '.zsh' }
-
-- name: users | temhr | copy tmux config (server version)
-  tags: dotfiles,users,temhr,tmux,users,vim,zsh
-  copy:
-    src: users/temhr/tmux/tmux.conf.server
-    dest: /home/temhr/.tmux.conf
-    owner: temhr
-    group: temhr
-    mode: 0600
-  when: "'server' not in group_names"
-
-- name: users | temhr | copy tmux config (workstation version)
-  tags: dotfiles,users,temhr,tmux,users,vim,zsh
-  copy:
-    src: users/temhr/tmux/tmux.conf.workstation
-    dest: /home/temhr/.tmux.conf
-    owner: temhr
-    group: temhr
-    mode: 0600
-  when: "'server' in group_names"
 
 - name: users | temhr | copy dotfiles
   copy:
