@@ -1,6 +1,6 @@
 [pve]
-pve0
-pve1
+pve0.local
+pve1.local
 
 [server]
 UbunSer-1
