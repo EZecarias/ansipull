@@ -2,7 +2,7 @@
 
 - name: NTP config file
   copy:
-    src: files/timesyncd.conf
+    src: files/system_setup/timesyncd.conf
     dest: /etc/systemd/timesyncd.conf
     owner: root
     group: root
