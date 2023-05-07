@@ -65,6 +65,7 @@
     - { src: 'bash/.bash_functions', dest: '.bash/bash_functions' }
     - { src: 'bash/.profile', dest: '.profile' }
     - { src: 'htop/htoprc', dest: '.config/htop/htoprc' }
+    - { src: 'inputrc', dest: '.inputrc' }
     - { src: 'mc/mc.ini', dest: '.config/mc/ini' }
     - { src: 'vim/vimrc', dest: '.vimrc' }
   tags: dotfiles
