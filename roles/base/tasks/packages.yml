@@ -1,16 +1,4 @@
 - name: install packages
   package:
     name: 
-     - adb
-     - busybox
-     - cron
-     - ethtool
      - ffmpeg
-     - gcc
-     - git
-     - htop
-     - iperf
-     - nano
-     - tmux
-     - usbutils
-     - vim-nox
