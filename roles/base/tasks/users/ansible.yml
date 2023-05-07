@@ -3,7 +3,8 @@
     name: ansible
     system: yes
 
-- name: copy sudoers_ansible
+- name: users | ansible | add sudoers file
+  tags: settings,ansible,sudo,system,users
   copy:
     src: files/users/sudoers_ansible
     dest: /etc/sudoers.d/ansible
