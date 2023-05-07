@@ -24,4 +24,6 @@
       - aptitude
       - software-properties-common
     state: latest
-  when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu"]
+  when: 
+    - "'pve' not in group_names"
+    - ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu"]
