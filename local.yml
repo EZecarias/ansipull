@@ -15,7 +15,7 @@
   tags: base
   become: true
   roles: base
-    
+
 - hosts: pve
   tags: pve
   become: true
