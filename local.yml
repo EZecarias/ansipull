@@ -1,6 +1,6 @@
 ---
 # tasks to complete before running roles
-- hosts: all
+- hosts: all:!pve
   tags: always
   become: true
   pre_tasks:
