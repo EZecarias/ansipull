@@ -9,7 +9,7 @@
     
 - name: .bashrc config file
   copy:
-    src: files/users/bash/.bashrc
+    src: files/users/temhr/bash/.bashrc
     dest: /home/temhr/.bashrc
     owner: root
     group: root
@@ -17,7 +17,7 @@
 
 - name: .bash_aliases config file
   copy:
-    src: files/users/bash/.bash_aliases
+    src: files/users/temhr/bash/.bash_aliases
     dest: /home/temhr/.bash_aliases
     owner: root
     group: root
@@ -25,7 +25,7 @@
 
 - name: .bash_prompt config file
   copy:
-    src: files/users/bash/.bash_prompt
+    src: files/users/temhr/bash/.bash_prompt
     dest: /home/temhr/.bash_prompt
     owner: root
     group: root
