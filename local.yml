@@ -14,20 +14,17 @@
 - hosts: all:!pve
   tags: base
   become: true
-  roles:
-    - base
+  roles: base
     
 - hosts: pve
   tags: pve
   become: true
-  roles:
-    - pve
+  roles: 
     
 - hosts: server
   tags: server
   become: true
-  roles:
-    - server
+  roles: server
 
 # end of run cleanup
 - hosts: all
