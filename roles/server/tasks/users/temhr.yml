@@ -6,27 +6,16 @@
     owner: root
     group: root
     mode: 0440
-    
-- name: .bashrc config file
-  copy:
-    src: files/users/temhr/bash/.bashrc
-    dest: /home/temhr/.bashrc
-    owner: root
-    group: root
-    mode: 0644
 
-- name: .bash_aliases config file
+- name: users | temhr | copy dotfiles
   copy:
-    src: files/users/temhr/bash/.bash_aliases
-    dest: /home/temhr/.bash_aliases
+    src: files/users/temhr/{{ item.src }}
+    dest: /temhr/{{ item.dest}}
     owner: root
     group: root
     mode: 0644
-
-- name: .bash_prompt config file
-  copy:
-    src: files/users/temhr/bash/.bash_prompt
-    dest: /home/temhr/.bash_prompt
-    owner: root
-    group: root
-    mode: 0644
+  with_items:
+      - { src: 'bash/.bashrc', dest: '.bashrc' }
+      - { src: 'bash/.bash_aliases', dest: '.bash_aliases' }
+      - { src: 'bash/.prompt', dest: '.prompt' }
+  tags: dotfiles
