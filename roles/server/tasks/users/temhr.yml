@@ -17,5 +17,5 @@
   with_items:
       - { src: 'bash/.bashrc', dest: '.bashrc' }
       - { src: 'bash/.bash_aliases', dest: '.bash_aliases' }
-      - { src: 'bash/.prompt', dest: '.prompt' }
+      - { src: 'bash/.bash_prompt', dest: '.bash_prompt' }
   tags: dotfiles
