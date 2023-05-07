@@ -19,7 +19,7 @@
 - hosts: pve
   tags: pve
   become: true
-  roles: 
+  roles: pve
     
 - hosts: server
   tags: server
