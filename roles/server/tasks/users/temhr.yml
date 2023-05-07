@@ -10,7 +10,7 @@
 - name: users | temhr | copy dotfiles
   copy:
     src: files/users/temhr/{{ item.src }}
-    dest: /temhr/{{ item.dest}}
+    dest: /home/temhr/{{ item.dest}}
     owner: root
     group: root
     mode: 0644
