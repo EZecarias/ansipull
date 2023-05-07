@@ -1,4 +1,3 @@
-
 - name: .bashrc config file
   copy:
     src: files/.bashrc
