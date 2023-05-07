@@ -1,7 +1,9 @@
 - name: users | temhr | create ansible user
   user:
-    name: ansible
-    system: no
+    name: temhr
+    shell: /bin/bash
+    createhome: yes
+    groups: sudo
 
 - name: users | temhr | add sudoers file
   tags: settings,temhr,sudo,system,users
