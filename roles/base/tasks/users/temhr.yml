@@ -1,7 +1,7 @@
 - name: users | temhr | create ansible user
   user:
     name: ansible
-    system: yes
+    system: no
 
 - name: users | temhr | add sudoers file
   tags: settings,temhr,sudo,system,users
