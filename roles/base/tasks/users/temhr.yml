@@ -6,16 +6,80 @@
     owner: root
     group: root
     mode: 0440
+    
+- name: users | temhr | create config directories
+  tags: dotfiles,temhr,tmux,users,vim,zsh
+  file:
+    path: /home/temhr/{{ item.dir }}
+    state: directory
+    owner: temhr
+    group: temhr
+    mode: 0700
+  with_items:
+    - { dir: '.bash' }
+    - { dir: '.config' }
+    - { dir: '.config/htop' }
+    - { dir: '.config/mc' }
+    - { dir: '.tmux' }
+    - { dir: '.tmux/config' }
+    - { dir: '.tmux/plugins' }
+    - { dir: '.vim' }
+    - { dir: '.vim/autoload' }
+    - { dir: '.vim/bundle' }
+    - { dir: '.vim/colors' }
+    - { dir: '.vim/ftplugin' }
+    - { dir: '.zsh' }
+
+- name: users | temhr | copy tmux config (server version)
+  tags: dotfiles,users,temhr,tmux,users,vim,zsh
+  copy:
+    src: users/temhr/tmux/tmux.conf.server
+    dest: /home/temhr/.tmux.conf
+    owner: temhr
+    group: temhr
+    mode: 0600
+  when: "'server' not in group_names"
+
+- name: users | temhr | copy tmux config (workstation version)
+  tags: dotfiles,users,temhr,tmux,users,vim,zsh
+  copy:
+    src: users/temhr/tmux/tmux.conf.workstation
+    dest: /home/temhr/.tmux.conf
+    owner: temhr
+    group: temhr
+    mode: 0600
+  when: "'server' in group_names"
 
 - name: users | temhr | copy dotfiles
   copy:
     src: files/users/temhr/{{ item.src }}
     dest: /home/temhr/{{ item.dest}}
-    owner: root
-    group: root
-    mode: 0644
+    owner: temhr
+    group: temhr
+    mode: 0600
   with_items:
-      - { src: 'bash/.bashrc', dest: '.bashrc' }
-      - { src: 'bash/.bash_aliases', dest: '.bash_aliases' }
-      - { src: 'bash/.bash_prompt', dest: '.bash_prompt' }
+    - { src: 'bash/.bash_aliases', dest: '.bash/bash_aliases' }
+    - { src: 'bash/.bash_profile', dest: '.bash_profile' }
+    - { src: 'bash/.bash_prompt', dest: '.bash/bash_prompt' }
+    - { src: 'bash/.bashrc', dest: '.bashrc' }
+    - { src: 'bash/.bash_functions', dest: '.bash/bash_functions' }
+    - { src: 'bash/.profile', dest: '.profile' }
+    - { src: 'htop/htoprc', dest: '.config/htop/htoprc' }
+    - { src: 'mc/mc.ini', dest: '.config/mc/ini' }
+    - { src: 'vim/vimrc', dest: '.vimrc' }
   tags: dotfiles
+  
+- name: users | temhr | copy vim color files
+  tags: dotfiles,temhr,users,vim
+  copy:
+    src: users/temhr/vim/{{ item.src }}
+    dest: /home/temhr/.vim/colors/{{ item.src }}
+    owner: temhr
+    group: temhr
+    mode: 0600
+  with_items:
+    - { src: 'bubblegum-256-dark.vim' }
+    - { src: 'darktango.vim' }
+    - { src: 'jellybeans.vim' }
+    - { src: 'xoria256.vim' }
+    - { src: 'zenburn.vim' }
