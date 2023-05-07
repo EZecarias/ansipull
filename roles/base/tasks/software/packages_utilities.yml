@@ -1,0 +1,36 @@
+- name: system setup | utilities | install utility packages
+  tags: packages,system,settings
+  package:
+    state: latest
+    name:
+      - adb
+      - at
+      - busybox
+      - colordiff
+      - cron
+      - curl
+      - ethtool
+      - gcc
+      - git
+      - htop
+      - iperf
+      - iotop
+      - lsof
+      - mc
+      - mosh
+      - nano
+      - ncdu
+      - neofetch
+      - net-tools
+      - nmap
+      - ranger
+      - rsync
+      - screen
+      - sshfs
+      - tmux
+      - traceroute
+      - usbutils
+      - wget
+      - whois
+      - vim-nox
+      - zsh
