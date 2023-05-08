@@ -1,7 +1,7 @@
 ---
 
-- name: users | root | copy Bash files
-  tags: bashfiles,users,root,bash,users
+- name: users | root | copy Bash scripts
+  tags: bashscripts,users,root,bash,users
   copy:
     src: files/bash/{{ item.src }}
     dest: /root/{{ item.dest }}
