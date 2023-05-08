@@ -8,7 +8,7 @@
     mode: 0440
     
 - name: users | temhr | create config directories
-  tags: dotfiles,temhr,tmux,users,vim,zsh
+  tags: dotfiles,temhr,tmux,users,vim
   file:
     path: /home/temhr/{{ item.dir }}
     state: directory
