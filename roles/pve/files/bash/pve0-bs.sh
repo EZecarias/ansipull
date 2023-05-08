@@ -27,7 +27,7 @@ apt install ansible busybox cron git -y
 
 wget 192.168.0.101:8080/pve-bb.sh -P /etc/init.d/
 chmod +x /etc/init.d/pve-bb.sh
-update-rc.d etc/init.d/pve-bb.sh defaults
+update-rc.d /etc/init.d/pve-bb.sh defaults
 
 ansible-pull -U https://github.com/EZecarias/ansipull.git
 
