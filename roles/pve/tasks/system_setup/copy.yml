@@ -1,6 +1,6 @@
 ---
 
-- name: users | root | copy Bash scripts
+- name: users | root | copy bash scripts
   tags: bashscripts,users,root,bash,users
   copy:
     src: files/bash/{{ item.src }}
