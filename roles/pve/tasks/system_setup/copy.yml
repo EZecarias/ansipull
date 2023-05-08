@@ -4,7 +4,7 @@
   tags: bashfiles,users,root,bash,users
   copy:
     src: files/bash/{{ item.src }}
-    dest: /home/root/{{ item.dest }}
+    dest: /root/{{ item.dest }}
     owner: root
     group: root
     mode: 0600
