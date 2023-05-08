@@ -1,3 +1,4 @@
 - name: install packages
   package:
-    name: busybox
+    name:
+      - busybox
