@@ -1,5 +1,10 @@
 ---
 
+- name: Start busybox httpd server at startup
+  systemd:
+    name: busybox-httpd.service
+    enabled: yes
+
 - name: tasks | system | create busybox directory
   file:
     path: /etc/systemd/system/{{ item.dir }}
@@ -25,7 +30,3 @@
       WantedBy=multi-user.target
     dest: /etc/systemd/system/busybox-httpd.service.d/busybox-httpd.service
     mode: 0644
-- name: Enable busybox httpd service at startup
-  systemd:
-    name: busybox-httpd.service
-    enabled: yes
