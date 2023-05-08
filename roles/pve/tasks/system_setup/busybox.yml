@@ -1,22 +1,22 @@
-    - name: Install busybox httpd package
-      apk:
-        name: busybox-extras
-    - name: Copy busybox httpd service file to appropriate folder
-      copy:
-        content: |
-          [Unit]
-          Description=Busybox HTTPD Server
-          After=network.target #start after network is up
+- name: Install busybox httpd package
+  apk:
+    name: busybox-extras
+- name: Copy busybox httpd service file to appropriate folder
+  copy:
+    content: |
+      [Unit]
+      Description=Busybox HTTPD Server
+      After=network.target #start after network is up
 
-          [Service]
-          Type=simple # The service type is simple
-          ExecStart=/usr/sbin/httpd -f -h ~/Sync/www -p 8080 -vvv
+      [Service]
+      Type=simple
+      ExecStart=/usr/sbin/httpd -f -h ~/Sync/www -p 8080 -vvv
 
-          [Install]
-          WantedBy=multi-user.target
-        dest: /etc/systemd/system/busybox-httpd.service.d/
-        mode: '0644'
-    - name: Enable busybox httpd service at startup
-      systemd:
-        name: busybox-httpd.service
-        enabled: yes
+      [Install]
+      WantedBy=multi-user.target
+    dest: /etc/systemd/system/busybox-httpd.service.d/
+    mode: '0644'
+- name: Enable busybox httpd service at startup
+  systemd:
+    name: busybox-httpd.service
+    enabled: yes
