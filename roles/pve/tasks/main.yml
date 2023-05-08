@@ -3,7 +3,7 @@
 #  - import_tasks: users/ansible.yml
 
   # Set up the ansible environment
-#  - import_tasks: ansible_setup.yml
+  - import_tasks: ansible_setup.yml
   
   # Perform remaining tasks:
   - import_tasks: system_setup/cron.yml
