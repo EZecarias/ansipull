@@ -6,25 +6,28 @@ echo "deb [signed-by=/usr/share/keyrings/syncthing-archive-keyring.gpg] https://
 echo "deb [signed-by=/usr/share/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing candidate" | sudo tee /etc/apt/sources.list.d/syncthing.list
 apt-get update -y
 apt-get install syncthing -y
-wget 192.168.0.101:8080/0syncthing@.service -P /etc/systemd/system/syncthing@.service
+wget 192.168.0.101:8080/0syncthing@.service -P /etc/systemd/system/
+mv /etc/systemd/system/0syncthing@.service /etc/systemd/system/syncthing@.service 
 systemctl daemon-reload
 systemctl enable syncthing@root.service
 
 #copy syncthing configs from www
-wget 192.168.0.101:8080/0config.xml -P ~/.config/syncthing/config.xml
-wget 192.168.0.101:8080/0config.xml.v0 -P ~/.config/syncthing/config.xml.v0
+wget 192.168.0.101:8080/0config.xml -P ~/.config/syncthing/
+mv ~/.config/syncthing/0config.xml ~/.config/syncthing/config.xml
+wget 192.168.0.101:8080/0config.xml.v0 -P ~/.config/syncthing/
+mv ~/.config/syncthing/0config.xml.v0 ~/.config/syncthing/config.xml.v0
 
 #copy sys configs from www
-wget 192.168.0.101:8080/sys/logind.conf -P /etc/systemd/logind.conf
+wget 192.168.0.101:8080/sys/logind.conf -P /etc/systemd/
 systemctl restart systemd-logind
-wget 192.168.0.101:8080/sys/grub -p /etc/default/grub
+wget 192.168.0.101:8080/sys/grub -p /etc/default/
 update-grub
 
 apt install ansible busybox cron git -y
 
-wget 192.168.0.101:8080/pve-bb.sh -P /etc/init.d/pve-bb.sh
+wget 192.168.0.101:8080/pve-bb.sh -P /etc/init.d/
 chmod +x /etc/init.d/pve-bb.sh
-update-rc.d pve-bb.sh defaults
+update-rc.d etc/init.d/pve-bb.sh defaults
 
 ansible-pull -U https://github.com/EZecarias/ansipull.git
 
