@@ -1,6 +1,3 @@
-- name: Install busybox httpd package
-  apk:
-    name: busybox-extras
 - name: Copy busybox httpd service file to appropriate folder
   copy:
     content: |
