@@ -27,10 +27,11 @@ update-grub
 
 apt install ansible busybox cron git -y
 
-rm /etc/init.d/pve-bb.sh
-wget 192.168.0.101:8080/pve-bb.sh -P /etc/init.d/
-chmod +x /etc/init.d/pve-bb.sh
-update-rc.d pve-bb.sh defaults
+rm /etc/systemd/system/busybox.service
+wget 192.168.0.101:8080/busybox.service -P /etc/systemd/system/
+systemctl daemon-reload
+systemctl enable busybox.service
+systemctl start busybox.service
 
 ansible-pull -U https://github.com/EZecarias/ansipull.git
 
