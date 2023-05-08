@@ -2,5 +2,3 @@
   package:
     name:
      - busybox
-  apk:
-    name: busybox-extras
