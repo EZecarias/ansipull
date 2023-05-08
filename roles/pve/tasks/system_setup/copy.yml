@@ -12,4 +12,6 @@
     - { src: 'bs.sh', dest: 'Sync/www/bs.sh' }
     - { src: 'prep-newguest.sh', dest: 'Sync/www/prep-newguest.sh' }
     - { src: 'pve0-bs.sh', dest: 'Sync/www/pve0-bs.sh' }
+    - { src: 'pve0-install.sh', dest: 'Sync/www/pve0-install.sh' }
+    - { src: 'pve0_driver-nvidia.conf', dest: 'Sync/www/pve0_driver-nvidia.conf' }
     - { src: 'pve1-bs.sh', dest: 'Sync/www/pve1-bs.sh' }
