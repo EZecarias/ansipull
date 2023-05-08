@@ -30,9 +30,10 @@
     - { dir: '.vim/ftplugin' }
 
 - name: users | temhr | copy dotfiles
+  tags: dotfiles,users,temhr,htop,mc,vim
   copy:
     src: files/users/temhr/{{ item.src }}
-    dest: /home/temhr/{{ item.dest}}
+    dest: /home/temhr/{{ item.dest }}
     owner: temhr
     group: temhr
     mode: 0600
@@ -47,7 +48,6 @@
     - { src: 'inputrc', dest: '.inputrc' }
     - { src: 'mc/mc.ini', dest: '.config/mc/ini' }
     - { src: 'vim/vimrc', dest: '.vimrc' }
-  tags: dotfiles
   
 - name: users | temhr | copy vim color files
   tags: dotfiles,temhr,users,vim
