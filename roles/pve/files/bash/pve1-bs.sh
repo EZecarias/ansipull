@@ -15,9 +15,9 @@ wget 192.168.0.100:8080/1config.xml -P ~/.config/syncthing/config.xml
 wget 192.168.0.100:8080/1config.xml.v0 -P ~/.config/syncthing/config.xml.v0
 
 #copy sys configs from www
-wget 192.168.0.100:8080/sys/logind.conf --directory-prefix=/etc/systemd/logind.conf
+wget 192.168.0.100:8080/sys/logind.conf -P /etc/systemd/logind.conf
 systemctl restart systemd-logind
-wget 192.168.0.100:8080/sys/grub --directory-prefix=/etc/default/grub
+wget 192.168.0.100:8080/sys/grub -p /etc/default/grub
 update-grub
 
 apt install ansible busybox cron git -y
