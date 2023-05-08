@@ -18,7 +18,7 @@
     dest: /root/{{ item.dest }}
     owner: root
     group: root
-    mode: 0600
+    mode: 0644
   with_items:
       - { src: 'bash/bashrc', dest: '.bashrc' }
       - { src: 'bash/bash_profile', dest: '.bash_profile' }
