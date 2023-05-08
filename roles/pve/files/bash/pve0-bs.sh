@@ -20,7 +20,11 @@ systemctl restart systemd-logind
 wget 192.168.0.101:8080/sys/grub --directory-prefix=/etc/default/grub
 update-grub
 
-apt install ansible cron git -y
+apt install ansible busybox cron git -y
+
+pkill busybox
+
+busybox httpd -p 8080 -h ~/Sync/www
 
 ansible-pull -U https://github.com/EZecarias/ansipull.git
 
