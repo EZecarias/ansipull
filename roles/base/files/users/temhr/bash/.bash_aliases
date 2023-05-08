@@ -2,6 +2,7 @@
 alias ..='cd ..'
 alias ...='cd ../../../'
 alias ....='cd ../../../../'
+alias al='ls -al'
 alias back='cd $OLDPWD'
 alias c='clear'
 alias cd..='cd ..'
