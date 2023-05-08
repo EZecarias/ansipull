@@ -3,7 +3,7 @@ Description=My Script Service
 After=network.target
 
 [Service]
-ExecStart=~/Sync/www/pve-bb.sh
+ExecStart=/root/Sync/www/pve-bb.sh
 
 [Install]
 WantedBy=multi-user.target
