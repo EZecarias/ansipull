@@ -20,7 +20,7 @@ mv ~/.config/syncthing/0config.xml.v0 ~/.config/syncthing/config.xml.v0
 #copy sys configs from www
 wget 192.168.0.101:8080/sys/logind.conf -P /etc/systemd/
 systemctl restart systemd-logind
-wget 192.168.0.101:8080/sys/grub -p /etc/default/
+wget 192.168.0.101:8080/sys/grub -P /etc/default/
 update-grub
 
 apt install ansible busybox cron git -y
