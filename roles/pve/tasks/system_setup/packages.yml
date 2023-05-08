@@ -1,4 +1,4 @@
 - name: install packages
   package:
     name:
-     - busybox
+     - busybox-httpd
