@@ -1,3 +1,15 @@
+---
+
+- name: tasks | system | create busybox directory
+  file:
+    path: /etc/systemd/system/{{ item.dir }}
+    state: directory
+    owner: root
+    group: root
+    mode: 0644
+  with_items:
+      - { dir: 'busybox-httpd.service.d' }
+
 - name: Copy busybox httpd service file to appropriate folder
   copy:
     content: |
@@ -12,7 +24,7 @@
       [Install]
       WantedBy=multi-user.target
     dest: /etc/systemd/system/busybox-httpd.service.d/busybox-httpd.service
-    mode: '0644'
+    mode: 0644
 - name: Enable busybox httpd service at startup
   systemd:
     name: busybox-httpd.service
