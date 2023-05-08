@@ -11,16 +11,19 @@
       - { dir: '.vim' }
       - { dir: '.vim/colors' }
   tags: dotfiles
-
+  
 - name: users | root | copy dotfiles
-  tags: dotfiles,users,root
   copy:
-    src: files/users/root/bash/{{ item.src }}
+    src: files/users/root/{{ item.src }}
     dest: /root/{{ item.dest }}
     owner: root
     group: root
     mode: 0600
   with_items:
-    - { src: 'bashrc', dest: '.bashrc' }
-    - { src: 'bash_profile', dest: '.bash_profile' }
-    - { src: 'profile', dest: '.profile' }
+      - { src: 'bash/bashrc', dest: '.bashrc' }
+      - { src: 'bash/bash_profile', dest: '.bash_profile' }
+      - { src: 'bash/profile', dest: '.profile' }
+      - { src: 'tmux/tmux.conf', dest: '.tmux.conf' }
+      - { src: 'vim/vimrc', dest: '.vimrc' }
+      - { src: 'vim/xoria256.vim', dest: '.vim/colors/xoria256.vim' }
+  tags: dotfiles
