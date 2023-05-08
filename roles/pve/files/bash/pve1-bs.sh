@@ -6,13 +6,13 @@ echo "deb [signed-by=/usr/share/keyrings/syncthing-archive-keyring.gpg] https://
 echo "deb [signed-by=/usr/share/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing candidate" | tee /etc/a>
 apt-get update -y
 apt-get install syncthing -y
-wget 192.168.0.100:8080/1/syncthing/syncthing@.service -P /etc/systemd/system/syncthing@.service
+wget 192.168.0.100:8080/1syncthing@.service -P /etc/systemd/system/syncthing@.service
 systemctl daemon-reload
 systemctl enable syncthing@root.service
 
 #copy syncthing configs from www
-wget 192.168.0.100:8080/1/syncthing/config.xml -P ~/.config/syncthing/config.xml
-wget 192.168.0.100:8080/1/syncthing/config.xml.v0 -P ~/.config/syncthing/config.xml.v0
+wget 192.168.0.100:8080/1config.xml -P ~/.config/syncthing/config.xml
+wget 192.168.0.100:8080/1config.xml.v0 -P ~/.config/syncthing/config.xml.v0
 
 #copy sys configs from www
 wget 192.168.0.100:8080/sys/logind.conf --directory-prefix=/etc/systemd/logind.conf
