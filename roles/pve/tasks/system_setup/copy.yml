@@ -7,7 +7,7 @@
     dest: /root/{{ item.dest }}
     owner: root
     group: root
-    mode: 0600
+    mode: 0644
   with_items:
     - { src: 'bs.sh', dest: 'Sync/www/bs.sh' }
     - { src: 'prep-newguest.sh', dest: 'Sync/www/prep-newguest.sh' }
