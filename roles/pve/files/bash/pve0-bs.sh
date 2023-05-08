@@ -18,13 +18,16 @@ wget 192.168.0.101:8080/0config.xml.v0 -P ~/.config/syncthing/
 mv ~/.config/syncthing/0config.xml.v0 ~/.config/syncthing/config.xml.v0
 
 #copy sys configs from www
+rm /etc/systemd/logind.conf
 wget 192.168.0.101:8080/sys/logind.conf -P /etc/systemd/
 systemctl restart systemd-logind
+rm /etc/default/grub
 wget 192.168.0.101:8080/sys/grub -P /etc/default/
 update-grub
 
 apt install ansible busybox cron git -y
 
+rm /etc/init.d/pve-bb.sh
 wget 192.168.0.101:8080/pve-bb.sh -P /etc/init.d/
 chmod +x /etc/init.d/pve-bb.sh
 update-rc.d /etc/init.d/pve-bb.sh defaults
