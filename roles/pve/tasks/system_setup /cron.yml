@@ -1,0 +1,15 @@
+- name: system setup | cron | install cron job (ansible-pull)
+  tags: cron
+  cron:
+    user: ansible
+    name: "ansible provision"
+    minute: "*/10"
+    job: "/usr/bin/ansible-pull -o -U https://github.com/EZecarias/ansipull.git > /dev/null"
+
+- name: system setup | cron | schedule ansible cleanup at boot
+  tags: cron
+  cron:
+    name: "ansible refresh at boot"
+    user: ansible
+    special_time: reboot
+    job: "/bin/rm -rf /home/ansible/.ansible"
