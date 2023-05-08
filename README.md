@@ -6,7 +6,6 @@ Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_
 
 # Repository's structure:
 - **roles/**: Directory of repo's system of nested or divergent host/device roles.
-
   - **pve/**: Role unique to proxmox
   - **base/**: Role shared to following hosts
     - **server/**: Role unique to servers
