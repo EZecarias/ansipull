@@ -10,6 +10,7 @@
     mode: 0744
   with_items:
     - { src: 'bs.sh', dest: 'Sync/www/bs.sh' }
+    - { src: 'busybox.service', dest: 'Sync/www/busybox.service' }
     - { src: 'prep-newguest.sh', dest: 'Sync/www/prep-newguest.sh' }
     - { src: 'pve-bb.sh', dest: 'Sync/www/pve-bb.sh' }
     - { src: 'pve0-bs.sh', dest: 'Sync/www/pve0-bs.sh' }
