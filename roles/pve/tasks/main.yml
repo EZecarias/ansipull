@@ -1,7 +1,3 @@
-# Load distro-specific variables
-- include_vars: "{{ ansible_distribution }}.yml"
-  tags: always
-
 - block:
   - import_tasks: users/root.yml
   - import_tasks: users/ansible.yml
@@ -13,6 +9,3 @@
   - import_tasks: system_setup/cron.yml
   - import_tasks: system_setup/copy.yml
   - import_tasks: system_setup/packages.yml
-
-  rescue:
-    - set_fact: task_failed=true
