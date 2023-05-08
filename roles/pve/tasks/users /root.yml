@@ -12,16 +12,16 @@
 
 - name: users | root | copy dotfiles
   copy:
-    remote_src: files/users/root/{{ item.src }}
+    src: files/users/root/{{ item.src }}
     dest: /root/{{ item.dest }}
     owner: root
     group: root
     mode: 0600
   with_items:
-      - { remote_src: 'bash/bashrc', dest: '.bashrc' }
-      - { remote_src: 'bash/bash_profile', dest: '.bash_profile' }
-      - { remote_src: 'bash/profile', dest: '.profile' }
-      - { remote_src: 'tmux/tmux.conf', dest: '.tmux.conf' }
-      - { remote_src: 'vim/vimrc', dest: '.vimrc' }
-      - { remote_src: 'vim/xoria256.vim', dest: '.vim/colors/xoria256.vim' }
+      - { src: 'bash/bashrc', dest: '.bashrc' }
+      - { src: 'bash/bash_profile', dest: '.bash_profile' }
+      - { src: 'bash/profile', dest: '.profile' }
+      - { src: 'tmux/tmux.conf', dest: '.tmux.conf' }
+      - { src: 'vim/vimrc', dest: '.vimrc' }
+      - { src: 'vim/xoria256.vim', dest: '.vim/colors/xoria256.vim' }
   tags: dotfiles
