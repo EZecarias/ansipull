@@ -1,4 +1,6 @@
+#!/bin/sh
+
 nm-online
 
 pkill busybox
-busybox httpd -p 8080 -h ~/Sync/www
+busybox httpd -f -p 8080 -h ~/Sync/www
