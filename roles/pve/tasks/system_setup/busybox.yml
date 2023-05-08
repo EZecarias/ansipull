@@ -11,7 +11,7 @@
 
       [Install]
       WantedBy=multi-user.target
-    dest: /etc/systemd/system/busybox-httpd.service.d/
+    dest: /etc/systemd/system/busybox-httpd.service.d/busybox-httpd.service
     mode: '0644'
 - name: Enable busybox httpd service at startup
   systemd:
