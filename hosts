@@ -5,13 +5,6 @@ pve1.local
 [server]
 UbunSer-1
 UbunSer-2
-UbunSer-3
-UbunSer-4
-UbunSer-5
-UbunSer-6
-UbunSer-7
-UbunSer-8
-UbunSer-9
 
 [workstation]
-workstation-1
+PopOS
