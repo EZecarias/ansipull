@@ -1,0 +1,10 @@
+---
+
+- name: software | thunderbird | install package
+  tags: packages,flatpak,thunderbird,workstation-packages
+  become_user: temhr
+  flatpak:
+    name: org.mozilla.thunderbird
+    method: user
+    state: present
+  when: thunderbird is defined and thunderbird == true
