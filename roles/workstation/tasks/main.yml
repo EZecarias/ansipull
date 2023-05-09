@@ -3,7 +3,7 @@
 - block:
   
   # Perform remaining tasks:
-  - import_tasks: system_setup/packages.yml
+  - import_tasks: packages.yml
   
   rescue:
     - set_fact: task_failed=true
