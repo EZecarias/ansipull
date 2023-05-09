@@ -5,6 +5,10 @@
   tags: always
 
 - block:
+
+  ## desktop environments
+  - include_tasks: desktop_environments/mate/packages.yml
+    when: mate is defined and mate == true
   
   ## system setup
   - import_tasks: system_setup/tweeks.yml
