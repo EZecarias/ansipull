@@ -1,3 +1,5 @@
+---
+
 - block:
   - import_tasks: users/root.yml
   - import_tasks: users/ansible.yml
