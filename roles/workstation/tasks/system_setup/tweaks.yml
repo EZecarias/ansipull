@@ -1,1 +1,14 @@
+# set up flatpak support
+- name: system setup | tweaks | add flatpak support
+  package:
+    name: flatpak
+    state: present
 
+- name: system setup | tweaks | flatpak | add flathub remote
+  tags: packages,flatpak,workstation-packages
+  become_user: temhr
+  flatpak_remote:
+    name: flathub
+    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+    method: user
+    state: present
