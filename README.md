@@ -1,6 +1,6 @@
 # Ansipull
 
-An Anisible-pull implementation for my Linux laptop/desktop homelab servers; automated installation of apps and configuration of system preferences. An ansible user/Cronjob is created on all target machines to track this github repo and automatically pull/run config after any committed changes.
+An Anisible-pull implementation for my Linux laptops, desktops, or homelab servers. Automates installation of apps and configures system preferences, while an ansible user/Cronjob is created on target machines to track this github repo and automatically pull/run config after any commits.
 
 Adapted from a fork of https://github.com/LearnLinuxTV/personal_ansible_desktop_configs.
 
