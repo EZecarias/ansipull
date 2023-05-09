@@ -1,0 +1,9 @@
+---
+
+- name: software | kdenlive | install package
+  tags: packages,kdenlive,flatpak,workstation-packages
+  become_user: temhr
+  flatpak:
+    name: org.kde.kdenlive
+    method: user
+    state: present
