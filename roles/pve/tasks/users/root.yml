@@ -3,7 +3,7 @@
 - name: users | root | ensure account is locked
   user:
     name: root
-    password_lock: yes
+    password_lock: false
 
 - name: users | root | create config directories
   file:
