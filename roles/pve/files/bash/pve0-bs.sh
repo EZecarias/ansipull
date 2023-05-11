@@ -11,12 +11,6 @@ mv /etc/systemd/system/0syncthing@.service /etc/systemd/system/syncthing@.servic
 systemctl daemon-reload
 systemctl enable syncthing@root.service
 
-#copy syncthing configs from www
-#wget 192.168.0.101:8080/0config.xml -P ~/.config/syncthing/
-#mv ~/.config/syncthing/0config.xml ~/.config/syncthing/config.xml
-#wget 192.168.0.101:8080/0config.xml.v0 -P ~/.config/syncthing/
-#mv ~/.config/syncthing/0config.xml.v0 ~/.config/syncthing/config.xml.v0
-
 #copy sys configs from www
 rm /etc/systemd/logind.conf
 wget 192.168.0.101:8080/sys/logind.conf -P /etc/systemd/
