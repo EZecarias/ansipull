@@ -28,6 +28,7 @@
       - rsync
       - screen
       - sshfs
+      - sudo
       - tmux
       - traceroute
       - usbutils
