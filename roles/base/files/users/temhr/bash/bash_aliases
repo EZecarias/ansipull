@@ -41,6 +41,9 @@ alias wget='wget -c'
 alias bb='busybox httpd -p'
 alias kbb='pkill busybox'
 
+# Chrome aliases
+alias chrome='flatpak run com.google.Chrome'
+
 ## get top process eating memory
 alias mem5='ps auxf | sort -nr -k 4 | head -5'
 alias mem10='ps auxf | sort -nr -k 4 | head -10'
