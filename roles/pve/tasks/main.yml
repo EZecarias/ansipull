@@ -12,9 +12,6 @@
   # Perform remaining tasks:
   - import_tasks: system_setup/copy.yml
   - import_tasks: system_setup/packages.yml
-    when: 
-      - ansible_hostname != "pve0"
-      - ansible_hostname != "pve1"
 
   rescue:
     - set_fact: task_failed=true
