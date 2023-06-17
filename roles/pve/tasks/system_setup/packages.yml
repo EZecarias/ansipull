@@ -3,5 +3,4 @@
 - name: install packages
   package:
     name:
-     - busybox
      - flatpak
