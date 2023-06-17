@@ -3,4 +3,4 @@
 - name: install packages
   package:
     name:
-     - flatpak
+     - ffmpeg
