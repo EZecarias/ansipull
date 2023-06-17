@@ -8,9 +8,6 @@
   # Install software
   - import_tasks: software/packages_cleanup.yml
   - import_tasks: software/packages_utilities.yml
-    when: 
-      - ansible_hostname != "pve0"
-      - ansible_hostname != "pve1"
   
   # Perform remaining tasks:
   - import_tasks: system_setup/cron.yml
