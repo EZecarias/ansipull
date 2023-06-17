@@ -5,34 +5,4 @@
   package:
     state: latest
     name:
-      - adb
-      - at
-      - busybox
-      - colordiff
-      - cron
-      - curl
-      - ethtool
-      - gcc
-      - git
-      - htop
-      - iperf
-      - iotop
-      - lsof
-      - mc
-      - mosh
-      - ncdu
-      - neofetch
-      - net-tools
-      - nmap
-      - ranger
-      - rsync
-      - screen
-      - sshfs
-      - sudo      
-      - tmux
-      - traceroute
-      - usbutils
-      - wget
-      - whois
-      - vim-nox
-      - zsh
+      - 
