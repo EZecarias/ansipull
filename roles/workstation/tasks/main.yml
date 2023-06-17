@@ -11,8 +11,8 @@
     when: gnome is defined and gnome == true
   
   ## system setup
-  - import_tasks: system_setup/tweeks.yml
- 
+  #- import_tasks: system_setup/tweeks.yml
+      
   ## uninstall software
   - import_tasks: software/packages_cleanup.yml
   
