@@ -1,9 +1,8 @@
 [pve]
-pve0.deb.local
-pve1.deb.local
+pve[0:10].deb.local
 
 [server]
 UbunSer
 
 [workstation]
-pve1.deb.local
+pve1
