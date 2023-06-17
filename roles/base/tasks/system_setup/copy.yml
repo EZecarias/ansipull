@@ -1,6 +1,7 @@
 ---
 
-- name: NTP config file
+- name: system setup | copy | NTP config file
+  tags: copy
   copy:
     src: files/system_setup/timesyncd.conf
     dest: /etc/systemd/timesyncd.conf
