@@ -33,6 +33,9 @@
   # Perform remaining tasks:
   - import_tasks: system_setup/cron.yml
   - import_tasks: system_setup/packages.yml
+    when: 
+      - ansible_hostname != "pve0"
+      - ansible_hostname != "pve1"
   - import_tasks: system_setup/copy.yml
 
   rescue:
