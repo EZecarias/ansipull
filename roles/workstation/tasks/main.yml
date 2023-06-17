@@ -12,6 +12,9 @@
   
   ## system setup
   - import_tasks: system_setup/tweeks.yml
+ 
+  ## uninstall software
+  - import_tasks: software/packages_cleanup.yml
   
   ## install software
   - import_tasks: software/audacious.yml
