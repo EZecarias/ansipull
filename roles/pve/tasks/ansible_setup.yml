@@ -11,7 +11,6 @@
   tags: ansible,ansible-setup,packages
   package:
     name: acl
-  when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu"]
 
 - name: ansible setup | create ansible log file
   tags: ansible,ansible-setup
