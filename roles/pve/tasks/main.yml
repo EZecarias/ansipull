@@ -5,17 +5,6 @@
   tags: always
 
 - block:
-  - import_tasks: users/root.yml
-  - import_tasks: users/ansible.yml
-  # Make sure users exist on the system
-  - import_tasks: users/temhr.yml
-
-  # Set up the ansible environment
-  - import_tasks: ansible_setup.yml
-    when: 
-      - ansible_hostname != "pve0"
-      - ansible_hostname != "pve1"
-  
   # Install software
   - import_tasks: software/packages_cleanup.yml
     when: 
