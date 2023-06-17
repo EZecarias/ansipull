@@ -1,12 +1,8 @@
 [pve]
-pve0.local
-pve1.local
+*.deb.local
 
 [server]
-UbunSer-1
-UbunSer-2
-U2204CT
+UbunSer
 
 [workstation]
-PopOS
-pop-os
+pve1
