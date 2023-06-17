@@ -7,3 +7,4 @@
     name: org.kde.kdenlive
     method: user
     state: present
+  when: kdenlive is defined and kdenlive == true
