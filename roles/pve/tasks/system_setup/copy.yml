@@ -1,6 +1,6 @@
 ---
 
-- name: copy | root | bootstrap bash scripts
+- name: system setup | copy | root | bootstrap bash scripts
   tags: bashscripts,root,bash,copy
   copy:
     src: files/bash/{{ item.src }}
