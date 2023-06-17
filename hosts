@@ -1,5 +1,6 @@
 [pve]
 *.deb.local
+testpve
 
 [server]
 UbunSer
