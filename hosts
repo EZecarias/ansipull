@@ -3,6 +3,7 @@ pve[0:10].deb.local
 
 [server]
 UbunSer
+stuff
 
 [workstation]
 pve1
