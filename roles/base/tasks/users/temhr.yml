@@ -1,5 +1,12 @@
 ---
 
+- name: users | temhr | create temhr user
+  tags: settings,temhr,sudo,users
+  user:
+    name: temhr
+    state: present
+    createhome: yes
+
 - name: users | temhr | add sudoers file
   tags: settings,temhr,sudo,system,users
   copy:
