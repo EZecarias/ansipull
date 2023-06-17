@@ -1,7 +1,7 @@
 ---
 
 # tasks to complete before running roles
-- hosts: all:!pve
+- hosts: all
   tags: always
   become: true
   pre_tasks:
@@ -14,7 +14,7 @@
       when: ansible_distribution in ["Debian", "Ubuntu"]
 
 # run roles
-- hosts: all:!pve
+- hosts: all
   tags: base
   become: true
   roles: 
