@@ -7,9 +7,6 @@
 - block:
   # Install software
   - import_tasks: software/packages_cleanup.yml
-    when: 
-      - ansible_hostname != "pve0"
-      - ansible_hostname != "pve1"
   - import_tasks: software/packages_utilities.yml
     when: 
       - ansible_hostname != "pve0"
