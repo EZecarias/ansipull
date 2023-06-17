@@ -1,9 +1,11 @@
 [pve]
 *.deb.local
-testpve
+testPVE
 
 [server]
 UbunSer
+testServer
 
 [workstation]
 pve1
+testWorkstation
