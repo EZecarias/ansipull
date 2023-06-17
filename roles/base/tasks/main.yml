@@ -12,6 +12,9 @@
 
   # Set up the ansible environment
   - import_tasks: ansible_setup.yml
+    when: 
+      - ansible_hostname != "pve0"
+      - ansible_hostname != "pve1"
 
   # Install software
   - import_tasks: software/repositories.yml
