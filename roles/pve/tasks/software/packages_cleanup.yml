@@ -5,4 +5,5 @@
   package:
     state: absent
     name:
+      - 
   when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu"]
