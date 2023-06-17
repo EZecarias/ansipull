@@ -13,8 +13,7 @@
       changed_when: False
       when:
         - ansible_distribution in ["Debian", "Ubuntu"]
-        - ansible_hostname != "pve0"
-        - ansible_hostname != "pve1"
+        - ansible_hostname != ["pve0", "pve1"]
 
 # run roles
 - hosts: all
