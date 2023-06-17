@@ -1,0 +1,15 @@
+- name: system setup | package cleanup | remove unneeded packages (debian, ubuntu, etc)
+  tags: cleanup,packages,system,settings
+  package:
+    state: absent
+    name:
+      - firefox-esr
+      - libreoffice-common
+      - libreoffice-core
+      - libreoffice-gnome
+      - libreoffice-gtk3
+      - libreoffice-help-common
+      - libreoffice-help-en-us
+      - libreoffice-style-colibre
+      - libreoffice-style-elementary
+  when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu"]
