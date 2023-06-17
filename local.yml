@@ -20,17 +20,16 @@
   roles: 
      - base
 
-- hosts: pvet
-  tags: pvet
+- hosts: pve
+  tags: pve
   become: true
   roles: 
-     - pvet
+     - pve
     
-- hosts: servert
-  tags: servert
+- hosts: server
+  tags: server
   become: true
   roles: 
-     - servert
 
 # end of run cleanup
 - hosts: all
