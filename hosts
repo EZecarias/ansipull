@@ -1,5 +1,5 @@
 [pve]
-*.deb.local
+pve[0:10].deb.local
 testPVE
 
 [server]
