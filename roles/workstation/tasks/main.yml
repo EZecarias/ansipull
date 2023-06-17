@@ -7,8 +7,8 @@
 - block:
 
   ## desktop environments
-  - include_tasks: desktop_environments/mate/packages.yml
-    when: mate is defined and mate == true
+  - include_tasks: desktop_environments/gnome/packages.yml
+    when: gnome is defined and gnome == true
   
   ## system setup
   - import_tasks: system_setup/tweeks.yml
