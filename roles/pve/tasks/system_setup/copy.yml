@@ -1,5 +1,16 @@
 ---
 
+- name: system setup | copy | root | create directory for bash scripts
+  file:
+    path: /root/{{ item.dir }}
+    state: directory
+    owner: root
+    group: root
+    mode: 0744
+  with_items:
+      - { dir: 'Sync/www' }
+  tags: bashscripts,root,bash,copy,directory,create
+
 - name: system setup | copy | root | bootstrap bash scripts
   tags: bashscripts,root,bash,copy
   copy:
