@@ -19,6 +19,7 @@
   ## install software
   - import_tasks: software/audacious.yml
   - import_tasks: software/audacity.yml
+  - import_tasks: software/bravebrowser.yml
   - import_tasks: software/darktable.yml
   - import_tasks: software/firefox.yml
   - import_tasks: software/google_chrome.yml
