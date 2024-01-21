@@ -48,6 +48,7 @@ alias chrome='flatpak run com.google.Chrome'
 alias e-alpinebox='distrobox-enter alpinebox'
 alias c-alpinebox='distrobox create --image alpine:latest --name alpinebox --additional-packages "adb neofetch scrcpy tmux vim"'
 alias s-distrobox='distrobox-stop'
+alias l-distrobox='distrobox list'
 
 ## get top process eating memory
 alias mem5='ps auxf | sort -nr -k 4 | head -5'
