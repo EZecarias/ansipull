@@ -1,0 +1,8 @@
+---
+
+- name: software | repository | install distro managed packages
+  tags: packages,repository,install
+  package:
+    state: latest
+    name:
+      - distrobox
