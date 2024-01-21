@@ -1,6 +1,6 @@
 ---
 
-# For Debian and Ubuntu, set up acceptance of steam license before continuing
+# For Debian, set up acceptance of steam license before continuing
 - name: software | steam | accept license
   tags: gaming,steam
   debconf:
