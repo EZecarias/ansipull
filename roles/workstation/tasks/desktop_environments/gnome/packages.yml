@@ -31,16 +31,16 @@
   package:
     name:
     - gnome-software-plugin-flatpak
-  when: ansible_distribution in ["Debian", "Ubuntu"]
+  when: ansible_distribution in ["Debian"]
 
-# It appears as though Debian and Ubuntu place GNOME support for openvpn in a separate package
+# It appears as though Debian place GNOME support for openvpn in a separate package
 # This doesn't seem to be required in archlinux.
 - name: gnome | packages | install gnome support for network-manager for debian and ubuntu hosts
   tags: gnome,gnome-packages,packages
   package:
     name:
       - network-manager-openvpn-gnome
-  when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu"]
+  when: ansible_distribution in ["Debian"]
 
 - name: gnome | packages | enable and start gdm
   tags: autofs,system,system setup
