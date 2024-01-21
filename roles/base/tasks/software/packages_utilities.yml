@@ -19,6 +19,7 @@
       - lsof
       - mc
       - mosh
+      - nano
       - ncdu
       - neofetch
       - net-tools
