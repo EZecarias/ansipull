@@ -15,7 +15,6 @@
       
   ## uninstall software
   - import_tasks: software/packages_cleanup.yml
-  - import_tasks: software/packages_managed.yml
   
   ## install software
   - import_tasks: software/audacious.yml
@@ -31,6 +30,7 @@
   - import_tasks: software/steam.yml
   - import_tasks: software/thunderbird.yml
   - import_tasks: software/vlc.yml
+  - import_tasks: software/packages_managed.yml
 
   rescue:
     - set_fact: task_failed=true
