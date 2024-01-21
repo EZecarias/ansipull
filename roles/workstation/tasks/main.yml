@@ -26,6 +26,7 @@
   - import_tasks: software/kdenlive.yml
   - import_tasks: software/keepassxc.yml
   - import_tasks: software/libreoffice.yml
+  - import_tasks: software/podman.yml
   - import_tasks: software/steam.yml
   - import_tasks: software/thunderbird.yml
   - import_tasks: software/vlc.yml
