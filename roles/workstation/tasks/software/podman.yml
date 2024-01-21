@@ -7,4 +7,3 @@
     name: io.podman_desktop.PodmanDesktop
     method: user
     state: present
-  when: podman is defined and podman == true
