@@ -45,9 +45,9 @@ alias kbb='pkill busybox'
 alias chrome='flatpak run com.google.Chrome'
 
 # Distrobox aliases
-alias alpinebox='distrobox-enter alpinebox'
-alias create alpinebox='distrobox create --image alpine:latest --name alpinebox --additional-packages "adb neofetch scrcpy tmux vim"'
-alias stop distrobox='distrobox-stop --all'
+alias e-alpinebox='distrobox-enter alpinebox'
+alias c-alpinebox='distrobox create --image alpine:latest --name alpinebox --additional-packages "adb neofetch scrcpy tmux vim"'
+alias s-distrobox='distrobox-stop --all'
 
 ## get top process eating memory
 alias mem5='ps auxf | sort -nr -k 4 | head -5'
