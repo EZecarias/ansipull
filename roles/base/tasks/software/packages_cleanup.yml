@@ -1,9 +1,9 @@
 ---
 
-- name: system setup | package cleanup | remove unneeded packages (debian, ubuntu, etc)
+- name: system setup | package cleanup | remove unneeded packages (debian)
   tags: cleanup,packages,system,settings
   package:
     state: absent
     name:
       - vi
-  when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu"]
+  when: ansible_distribution in ["Debian"]
