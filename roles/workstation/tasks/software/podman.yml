@@ -1,0 +1,10 @@
+---
+
+- name: software | podman | install package
+  tags: packages,podman,flatpak,workstation-packages
+  become_user: temhr
+  flatpak:
+    name: io.podman_desktop.PodmanDesktop
+    method: user
+    state: present
+  when: podman is defined and podman == true
