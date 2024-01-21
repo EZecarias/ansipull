@@ -22,7 +22,7 @@
     - steam is defined
     - steam == true
 
-- name: software | steam | install steam-devices package (debian
+- name: software | steam | install steam-devices package (debian)
   tags: steam,steam
   package:
     state: latest
