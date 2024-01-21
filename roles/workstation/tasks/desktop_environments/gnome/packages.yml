@@ -35,7 +35,7 @@
 
 # It appears as though Debian place GNOME support for openvpn in a separate package
 # This doesn't seem to be required in archlinux.
-- name: gnome | packages | install gnome support for network-manager for debian and ubuntu hosts
+- name: gnome | packages | install gnome support for network-manager for debian hosts
   tags: gnome,gnome-packages,packages
   package:
     name:
