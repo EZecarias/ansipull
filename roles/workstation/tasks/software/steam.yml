@@ -9,7 +9,7 @@
     value: "I AGREE"
     vtype: "select"
   when:
-    - ansible_distribution in ["Debian", "Ubuntu"]
+    - ansible_distribution in ["Debian"]
     - steam is defined
     - steam == true
 
@@ -22,22 +22,22 @@
     - steam is defined
     - steam == true
 
-- name: software | steam | install steam-devices package (debian, ubuntu, etc)
+- name: software | steam | install steam-devices package (debian
   tags: steam,steam
   package:
     state: latest
     name: steam-devices
   when:
-    - ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu"]
+    - ansible_distribution in ["Debian"]
     - steam is defined
     - steam == true
 
-- name: install vulkan drivers (debian, ubuntu, etc)
+- name: install vulkan drivers (debian)
   tags: drivers,steam
   package:
     state: latest
     name: mesa-vulkan-drivers
   when:
-    - ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu"]
+    - ansible_distribution in ["Debian"]
     - steam is defined
     - steam == true
