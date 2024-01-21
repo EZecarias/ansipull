@@ -1,4 +1,4 @@
-- name: system setup | package cleanup | remove unneeded packages (debian, ubuntu, etc)
+- name: system setup | package cleanup | remove unneeded packages (debian)
   tags: cleanup,packages,system,settings
   package:
     state: absent
