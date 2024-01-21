@@ -1,10 +1,6 @@
 [pve]
-pve[0:10].deb.local
 
 [server]
-UbunSer
-DebSer
 
 [workstation]
-pve1
-elite
+deb
