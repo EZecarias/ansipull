@@ -4,6 +4,7 @@
     state: absent
     name:
       - firefox-esr
+      - distrobox
       - libreoffice-common
       - libreoffice-core
       - libreoffice-gnome
