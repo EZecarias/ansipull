@@ -12,4 +12,4 @@
       - libreoffice-help-en-us
       - libreoffice-style-colibre
       - libreoffice-style-elementary
-  when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu"]
+  when: ansible_distribution in ["Debian"]
