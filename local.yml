@@ -12,7 +12,7 @@
         upgrade: yes
       changed_when: False
       when:
-        - ansible_distribution in ["Debian", "Ubuntu"]
+        - ansible_distribution in ["Debian"]
 
 # run roles
 - hosts: all
@@ -43,16 +43,16 @@
   tags: always
   become: true
   tasks:
-  - name: cleanup package cache (debian and ubuntu)
+  - name: cleanup package cache (debian)
     tags: always
     apt:
       autoclean: yes
     changed_when: false
-    when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu"]
+    when: ansible_distribution in ["Debian"]
 
-  - name: autoremove orphan packages (debian and ubuntu)
+  - name: autoremove orphan packages (debian)
     tags: always
     apt:
       autoremove: yes
       purge: yes
-    when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu"]
+    when: ansible_distribution in ["Debian"]
