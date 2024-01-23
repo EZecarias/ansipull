@@ -37,6 +37,9 @@ alias watch='watch -d'
 alias weather='curl wttr.in'
 alias wget='wget -c'
 
+# siduction aliases
+alias roll-sid='apt update && apt upgrade -y && apt full-upgrade -y && apt autoremove -y && flatpack update -y'
+
 # busybox aliases
 alias bb='busybox httpd -p'
 alias kbb='pkill busybox'
